@@ -23,19 +23,19 @@ The API is available at http://localhost:3000/api/v2/words/hello.json
 
 4. Create a empyt file `api.rb` in this new created folder
 
-If you followed the tutorial that what you should have in your `app` folder
+	If you followed the tutorial that what you should have in your `app` folder
 
-```
-$ ls app/
-app
-|-- api.rb
-|-- sentiment/
-|   |-- analyser.rb
-|   |-- sentiment.rb
-|   |-- data/
-|   |   |-- working_AFINN-111.txt
+    ```bash
+    $ ls app/
+    app
+    |-- api.rb
+    |-- sentiment/
+    |   |-- analyser.rb
+    |   |-- sentiment.rb
+    |   |-- data/
+    |   |   |-- working_AFINN-111.txt
 
-```
+    ```
 
 5. in `app/api/api.rb`
 
@@ -51,7 +51,7 @@ end
 ```ruby
 module Sentiment
   class Ress < Grape::API
-  	# Keep API logic like before
+	# Keep API logic like before
   end
 end
 ```
