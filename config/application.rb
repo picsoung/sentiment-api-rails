@@ -22,5 +22,7 @@ module SentimentApiRails
 
     config.paths.add "app/api", :glob => "**/*.rb"
     config.autoload_paths += Dir["#{Rails.root}/app/api/*"]
+
+    config.assets.enabled = false
   end
 end

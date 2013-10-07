@@ -34,3 +34,4 @@ end
 
 gem 'grape', :git => "https://github.com/intridea/grape.git"
 gem '3scale_client'
+gem 'pg'
