@@ -13,6 +13,7 @@ $ rails s
 
 The API is available at http://localhost:3000/api/v2/words/hello.json
 
+
 ## Step-by-step
 
 1. Follow [@njyx](https://github.com/njyx)'s tutorial about how to implement a simple API using Grape framework and 3scale. [link](http://www.3scale.net/2012/06/the-10-minute-api-up-running-3scale-grape-heroku-api-10-minutes/)
@@ -71,5 +72,15 @@ The API is available at http://localhost:3000/api/v2/words/hello.json
 
 9. Your API should be ready to serve. Relaunch your server and try to access it at `http://localhost:3000/api/v2/words/hello.json`
 
+## Deploy to engineyard
 
+1. Setup a new Application in your Cloud account and add deploy keys to it
 
+2. Create a new environnement
+    * passenger 3
+    * ruby of your choice 
+
+3. Launch instance and deploy
+   If the deploy breaks it generally coming from missing gems or assets configuration.
+
+4. Your API should be accessible :)
