@@ -39,37 +39,37 @@ The API is available at http://localhost:3000/api/v2/words/hello.json
 
 5. in `app/api/api.rb`
 
-```ruby
-class API < Grape::API
-  prefix 'api' # optional, it makes you api available at myserver.com/api/
-  mount Sentiment::Ress
-end
-```
+    ```ruby
+    class API < Grape::API
+      prefix 'api' # optional, it makes you api available at myserver.com/api/
+      mount Sentiment::Ress
+    end
+    ```
 
 6. Rename `sentiment.rb` in `app/api/sentiment/` to `ress.rb` and edit the file so it looks like this
 
-```ruby
-module Sentiment
-  class Ress < Grape::API
-	# Keep API logic like before
-  end
-end
-```
+    ```ruby
+    module Sentiment
+      class Ress < Grape::API
+    	# Keep API logic like before
+      end
+    end
+    ```
 
 7. Now edit `config/application.rb` and add those lines to take load new files added
 
-```ruby
-config.paths.add "app/api", :glob => "**/*.rb"
-config.autoload_paths += Dir["#{Rails.root}/app/api/*"]
-```
+    ```ruby
+    config.paths.add "app/api", :glob => "**/*.rb"
+    config.autoload_paths += Dir["#{Rails.root}/app/api/*"]
+    ```
 
 8. Finally modify your `routes.rb` so it mounts the API class
 
-```ruby
-mount API => '/'
-```
+    ```ruby
+    mount API => '/'
+    ```
 
-9. Your API should be ready to serve. Relaunch your server and try to access it at http://localhost:3000/api/v2/words/hello.json
+9. Your API should be ready to serve. Relaunch your server and try to access it at `http://localhost:3000/api/v2/words/hello.json`
 
 
 
